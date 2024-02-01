@@ -1,0 +1,433 @@
+/* Importing the fonts  */
+@import url("https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&family=Poppins:wght@200;400&family=Six+Caps&display=swap");
+/* Fonts end  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.poppins-L,
+.data-table {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+p,
+.poppins-S,
+.form-group.image-preview-container label {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+.button {
+  cursor: pointer;
+  width: 100%;
+  padding: 20px 10px;
+  border-radius: 6px;
+  border: 1px solid #3c40c6;
+  background-color: #3c40c6;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+.button:hover {
+  background-color: #1a1a7d; /* Darker shade of blue */
+  border-color: #1a1a7d;
+}
+.small-btn {
+  cursor: pointer;
+  /* /* background-color: rgb(152, 251, 152); */
+  border: 1px solid red;
+  border-radius: 6px;
+  padding: 5px 10px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+}
+.small-btn:hover {
+  background-color: darkred; /* Darker shade of green */
+  border-color: darkred;
+  color: #fff;
+}
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 80%;
+  margin: 0 auto;
+  background-color: rgb(152, 251, 152);
+}
+
+/* Css for the form starts  */
+.container {
+  background-color: #fff;
+  width: 60%;
+  padding: 20px;
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 5px 0 5px -5px #333, -5px 0 5px -5px #333;
+  margin-top: 50px;
+  border-radius: 10px;
+}
+input::placeholder,
+#floatingTextarea::placeholder {
+  color: #c1c1c1;
+}
+.form {
+  padding: 30px;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+.container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.form-group {
+  color: #333;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+}
+.form-group p {
+  visibility: hidden;
+}
+.form-group.success p {
+  visibility: visible;
+  color: rgb(152, 251, 152);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.form-group.form-group.success input {
+  border-color: rgb(152, 251, 152);
+}
+.form-group.error p {
+  visibility: visible;
+  color: #f53b57;
+  font-size: 15px !important;
+  text-transform: uppercase;
+}
+.form-group.error input,
+.form-group.error select {
+  border-color: #f53b57;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+.form-group label h5 {
+  color: #3c40c6;
+  font-size: 20px;
+}
+.form-group input,
+.form-control,
+#select {
+  border: 2px solid #f0f0f0;
+  border-radius: 6px;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  outline: none;
+}
+.form-group input,
+.form-group textarea,
+.form-group select {
+  border-left: 4px solid #3c40c6 !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+/* Css for the second line */
+.sec-line {
+  gap: 35px;
+}
+/* Css for the second line ends */
+
+/* For the selection  */
+#select.poppins-S option:checked {
+  color: inherit;
+  font-size: 18px;
+  font-weight: 500;
+}
+.basic,
+.intermediate,
+.premium {
+  font-size: 18px;
+  font-weight: 500;
+}
+.basic {
+  color: #b4d4ff;
+}
+.intermediate {
+  color: #94bb8d;
+}
+.premium {
+  color: #f8de22;
+}
+
+/* For the selection ends */
+
+/* For the text area */
+#floatingTextarea {
+  width: 100%;
+  height: 60px;
+  border: 2px solid #f0f0f0;
+}
+
+/* For the text area ends */
+
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.choose-file-note {
+  font-size: 13px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.choose-file-note-first {
+  color: #f53b57;
+}
+/* File uploading seciton css */
+#myfile {
+  border: none;
+  width: 30%;
+}
+.image-row {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-top: 25px;
+}
+.image-row input {
+  border-left: none !important;
+}
+.preview-over {
+  display: none;
+  width: 50%;
+}
+.preview-over.active {
+  display: block;
+}
+.preview {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+.preview #preview-selected-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/* File uploading section ends */
+.checkbox-container label {
+  margin-bottom: 0;
+}
+input#checkbox {
+  width: 2% !important;
+}
+.accept {
+  font-size: 18px;
+}
+/* DUMMY */
+.form-group.error .checkbox-container input {
+  border: 1px solid red; /* Add your preferred error styling here */
+}
+
+.form-group.error .checkbox-container label {
+  color: red; /* Add your preferred error styling here */
+}
+/* DUMMY */
+.form-group p {
+  font-size: 10px;
+  margin-top: 5px;
+}
+.button-over {
+  text-align: center;
+}
+.submit {
+  margin-top: 20px;
+  width: 20%;
+}
+
+/* Css for the form ends */
+
+/* Css for the table starts  */
+
+.table-container {
+  /* width: 80%; */
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.data-table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+}
+th {
+  background-color: #f0f0f0;
+}
+th,
+td {
+  border: 1px solid #333;
+  padding: 15px;
+  text-transform: uppercase;
+}
+.table-data {
+  width: 180px;
+  line-break: anywhere;
+}
+.action-col {
+  display: flex;
+  justify-content: space-evenly;
+}
+.reset-button {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.common-btn {
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  background-color: red;
+  padding: 15px 20px;
+  margin-top: 30px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.edit-btn {
+  margin-right: 10px;
+}
+.delete-btn {
+  margin-left: 10px;
+}
+/* Css for the table ends */
+
+/* Css for the modal start */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal.show {
+  display: block;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* Close Button */
+.modal .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  top: 5px;
+  position: absolute;
+  right: 25px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* MQ starts  */
+/* Extra small: <576px */
+@media screen and (max-width: 575px) {
+  .container {
+    width: 90%;
+  }
+  .sec-line {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .sec-line .form-group:first-child,
+  .sec-line .form-group:last-child {
+    width: 100%;
+  }
+  input#checkbox {
+    width: 4% !important;
+  }
+  .submit {
+    width: 30%;
+  }
+  .table-container {
+    width: 100%;
+  }
+}
+
+/* Small: ≥576px */
+@media screen and (min-width: 576px) {
+  /* Global MQ */
+  .container {
+    width: 90%;
+  }
+  /* Global MQ ends */
+  input#checkbox {
+    width: 4% !important;
+  }
+  .table-container {
+    width: 100%;
+  }
+  .submit {
+    width: 30%;
+  }
+}
+
+/* Medium: ≥768px */
+@media screen and (min-width: 768px) {
+  /* Global MQ */
+  .container {
+    width: 80%;
+  }
+  /* Global MQ ends */
+}
+
+/* Large: ≥992px */
+@media screen and (min-width: 992px) {
+  .sec-line {
+    display: flex;
+    gap: 35px;
+    width: 100%;
+  }
+  .sec-line .form-group:first-child,
+  .sec-line .form-group:last-child {
+    width: 50%;
+  }
+  .table-container {
+    width: 80%;
+  }
+}
+
+/* X-Large: ≥1200px */
+@media screen and (min-width: 1200px) {
+}
+
+/* XX-Large: ≥1400px */
+@media screen and (min-width: 1400px) {
+}
+/* MQ ends */

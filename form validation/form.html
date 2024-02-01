@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <!-- linking the stylesheet -->
+    <link rel="stylesheet" href="form.css">
+
+    <style>
+        #myfile {
+            color: transparent;
+        }
+    </style>
+</head>
+<!-- 
+    name - NO numbers and the special character
+    
+    number - text and no special character
+    
+    email - allowed with the @ and the domain name .com / .co.in
+    
+    checkbox - this checkbox need to important
+    
+    select - need to create the multiselect option
+    
+    File upload - allow jpg , png max size 5 mb
+    
+    Submission data - it need to show on the table 
+    
+    Create a table then the data got on the form need to show on 
+        table with the edit and delete option
+    
+    Delete button work on the table the delete button need to delete
+        the data on the form 
+ -->
+
+<body>
+    <div class="form-container container">
+        <div class="form-total">
+            <form class="form" action="#" id="form" autocomplete="off">
+                <h2>REGISTRATION FORM</h2>
+
+                <div class="form-group ">
+                    <label for="username">
+                        <h5>NAME</h5>
+                    </label>
+                    <input type="text" id="username" data-name="username" placeholder="ENTER YOUR NAME HERE">
+                    <p>Error message</p>
+                </div>
+                <div class="sec-line">
+                    <div class="form-group ">
+                        <label for="mobileNumber">
+                            <h5>MOBILE NUMBER</h5>
+                        </label>
+                        <input type="tel" id="mobileNumber" data-name="mobileNumber"
+                            placeholder="ENTER YOUR MOBILE NUMBER">
+                        <p>Error message</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">
+                            <h5>MAIL ID</h5>
+                        </label>
+                        <input type="email" id="email" data-name="email" placeholder="ENTER YOUR MAIL ID">
+                        <p>Error message</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="select">
+                        <h5>Choose an option</h5>
+                    </label>
+                    <select class="poppins-S" id="select" data-name="options">
+                        <option value="" disabled selected="selected" hidden>PLANS</option>
+                        <option class="basic" value="BASIC">BASIC</option>
+                        <option class="intermediate" value="INTERMEDIATE">INTERMEDIATE</option>
+                        <option class="premium" value="PREMIUM">PREMIUM</option>
+                    </select>
+                    <p>Error message</p>
+                </div>
+
+                <div class="form-group image-preview-container">
+                    <label for="myfile">
+                        <h5>Select a file</h5>
+                    </label>
+                    <span class="choose-file-note poppins-S"><span class="choose-file-note-first">NOTE:</span> ONLY JPG
+                        AND PNG
+                        FILES ARE ACCEPTED, AND THEY MUST BE
+                        WITHIN 5
+                        MB.
+                    </span>
+                    <div class="image-row">
+                        <input class="poppins-S" type="file" id="myfile" data-name="myfile" accept="image/*"
+                            onchange="previewImg(event);" />
+                        <label for="myfile" id="fileInputLabel"> No file chosen</label>
+                        <!-- <span id="fileInputLabel">No file chosen</span> -->
+                        <p>Error message</p>
+                        <div class="preview-over">
+                            <div class="preview">
+                                <img class="poppins-S" id="preview-selected-image" onclick="showLargeImage()"
+                                    alt="Image will displayed after uploaded" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="floatingTextarea">
+                        <h5>MESSAGE</h5>
+                    </label>
+                    <textarea class="form-control" name="message" placeholder="ENTER YOUR WORDS HERE..."
+                        id="floatingTextarea" data-name="Message"></textarea>
+                    <p>Error message</p>
+                </div>
+                <div class="form-group checkbox">
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="checkbox" data-name="checkbox">
+                        <label for="checkbox" class="accept poppins-S"> I accept all terms</label>
+                    </div>
+
+                </div>
+                <div class="button-over">
+                    <button class="button submit poppins-L" type="submit">SUBMIT</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="table-container">
+        <table class="data-table" id="dataTable">
+            <tr class="table-row">
+                <th>NAME</th>
+                <th>NUMBER</th>
+                <th>MAIL </th>
+                <th>TEXT</th>
+                <th>IMAGE</th>
+                <th>PLAN</th>
+                <th>ACTION</th>
+            </tr>
+        </table>
+        <div class="reset-button">
+            <button class="small-btn common-btn" id="reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- For the modal element -->
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="modalMessage"></p>
+        </div>
+    </div>
+    <!-- For the modal element ends  -->
+
+    <script src="showImage.js"></script>
+    <script src="formvalidation.js"></script>
+</body>
+
+</html>

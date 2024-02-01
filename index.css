@@ -1,0 +1,602 @@
+/* Importing the fonts  */
+@import url("https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&family=Poppins:wght@200;400&family=Six+Caps&display=swap");
+/* Fonts end  */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.pop-big {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+p,
+.pop-small,
+.book-btn,
+.book-now-btn,
+.service-description {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.book-btn:hover,
+.book-now-btn:hover {
+  filter: brightness(0.8);
+  color: #fff;
+}
+
+/*****************************Modifications starts here*********************************/
+
+/* Navbar Css start here */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #fff;
+  width: 80%;
+  height: 100px;
+  position: absolute; /* Relative for the div name hero-img*/
+  top: 5%;
+  left: 10%;
+  right: 10%;
+  background-color: #fff;
+  z-index: 1;
+}
+.total-logo {
+  display: flex;
+  align-items: center;
+}
+.total-logo .logo {
+  width: 50px;
+  height: 50px;
+}
+.total-logo .logo img {
+  transform: scaleX(-1);
+  width: 100%;
+  height: 100%;
+}
+.banner-text .logo-text {
+  font-size: 40px;
+  color: #008000;
+  font-weight: 600;
+}
+.banner-text .logo-bottom {
+  color: #d2d2d2;
+  font-size: 15px;
+  margin-top: -10px;
+}
+.nav-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-list-items {
+  display: inline-block;
+  padding: 30px;
+  list-style: none;
+  color: #b4b4b4;
+  border-right: 1px solid #d4d4d4;
+}
+.nav-list-items.item-5 {
+  border-right: #fff;
+}
+.nav-list-items:hover {
+  background-color: #9ed034;
+  transition: all 0.5s ease-out;
+  color: #fff;
+}
+
+/* For the navbar hamburger menu */
+.menu {
+  display: none;
+  cursor: pointer;
+}
+.menu-line {
+  height: 3px;
+  width: 20px;
+  background-color: #111;
+  margin-bottom: 3px;
+}
+/* For the navbar hamburger menu ends */
+/* Navbar Css ends here */
+
+/* Banner image section css starts here */
+.hero-img {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 700px;
+}
+.hero-img .banner-img {
+  width: 100%;
+  height: 100%;
+}
+.banner-caption {
+  position: absolute;
+  left: 10%;
+  bottom: 20%;
+  padding: 30px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  text-align: center;
+}
+.price-over {
+  display: flex;
+  justify-content: center;
+}
+.price {
+  background-color: red;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 600;
+  padding: 15px 20px;
+}
+.banner-place {
+  padding: 20px 0 20px;
+  font-weight: 600;
+  color: #656565;
+}
+.caption-para {
+  color: #888;
+}
+.caption-para .caption-small {
+  color: #9ed034;
+}
+.book-btn {
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  background-color: #9ed034;
+  padding: 15px 20px;
+  margin-top: 30px;
+  font-weight: 700;
+}
+/* Banner section css ends here */
+
+/* Services section css starts */
+.total-services.container {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.total-services .service.item-1,
+.total-services .service.item-2,
+.total-services .service.item-3,
+.total-services .service.item-4 {
+  display: flex;
+  gap: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  z-index: 1;
+}
+
+.service .place img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.total-services .service .place-description {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.total-services .service .place-description .place-description-top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100px;
+}
+.place-heading,
+.book-now-btn {
+  text-align: center;
+  color: #fff;
+  background-color: #9ed034;
+  /* padding: 15px; */
+}
+.place-heading {
+  padding: 15px;
+}
+.book-now-btn {
+  cursor: pointer;
+  padding: 20px;
+  border: none;
+  width: 100%;
+}
+.book-now-btn-text {
+  font-size: 14px;
+  font-weight: 700;
+}
+.service .place-description h4 {
+  font-size: 18px;
+  color: #9ed034;
+  font-weight: 400;
+  /* padding-top: 15px; */
+}
+.service .place-description .service-description {
+  color: red;
+}
+/* Services section css ends */
+
+/* Images div Css starts */
+.total-img-over {
+  background-color: #eee;
+}
+.images-div {
+  display: flex;
+}
+
+.images-div .images img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
+/* Images div Css ends*/
+
+/* Footer Css starts */
+.footer {
+  height: 150px;
+}
+.inner-border {
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.copyrights {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: #a3a6aa;
+}
+.brand-name {
+  color: #9ed034;
+}
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+.social-platform {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+.social-platform > .icons {
+  color: #9ed034;
+}
+/* Footer Css ends */
+
+/* Media query as per the  bootstrap width */
+
+/* Extra small: <576px */
+@media screen and (max-width: 575px) {
+  /* Global MQ */
+  .padding {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  /*Global MQ ends */
+
+  /* Nav bar menu starts */
+  .navbar-container {
+    flex-direction: column;
+  }
+  .total-logo {
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+  .nav-items {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    opacity: 0.9;
+  }
+  .nav-list-items {
+    display: block;
+    border-right: none;
+    text-align: center;
+  }
+  .menu {
+    display: block;
+    position: absolute;
+    right: 20px;
+    bottom: 42px;
+  }
+  .show-menu {
+    display: block;
+    margin-top: 26px;
+  }
+  .navbar-container.container {
+    padding: 0;
+  }
+  /* Nav bar menu ends */
+
+  /* Services MQ */
+  .total-services.container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .service {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+    padding: 0;
+  }
+
+  /* Services MQ ends */
+
+  /* Center content MQ starts */
+  .images-div .images img {
+    height: 100px;
+  }
+  /* Center content MQ ends*/
+
+  /* Footer MQ */
+  .inner-border {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  /* Footer MQ ends */
+}
+
+/* Small: ≥576px */
+@media screen and (min-width: 576px) {
+  /* Global MQ */
+  .padding {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  /*Global MQ ends */
+
+  /* Nav bar menu starts */
+  .navbar-container {
+    flex-direction: column;
+  }
+  .total-logo {
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+  .nav-items {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    opacity: 0.9;
+  }
+  .nav-list-items {
+    display: block;
+    border-right: none;
+    text-align: center;
+  }
+  .menu {
+    display: block;
+    position: absolute;
+    right: 20px;
+    bottom: 38px;
+  }
+  .show-menu {
+    display: block;
+    margin-top: 26px;
+  }
+  .navbar-container.container {
+    padding: 0;
+  }
+  /* Nav bar menu ends */
+
+  /* Services MQ*/
+  .total-services {
+    margin-top: 58px;
+  }
+  .total-services.container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .service {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-bottom: 35px;
+  }
+  /* Services MQ ends*/
+
+  /* Center content MQ starts */
+  .images-div .images img {
+    height: 120px;
+  }
+  .total-img-over {
+    margin-top: 80px;
+  }
+  /* Center content MQ ends*/
+
+  /* Footer MQ */
+  .inner-border {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  /* Footer MQ ends */
+}
+
+/* Medium: ≥768px */
+@media screen and (min-width: 768px) {
+  /* Global MQ */
+  .padding {
+    padding-top: 112px;
+    padding-bottom: 112px;
+  }
+  /*Global MQ ends */
+  /* Banner image section MQ */
+  .banner-caption {
+    width: 41.3%;
+  }
+  /* Banner image section MQ ends */
+  /* Service MQ */
+
+  /* .service.item-2,
+  .service.item-3 {
+    display: block;
+  }
+  .service.item-4 {
+    display: none;
+  } */
+  .total-services.container {
+    padding: 0 10px;
+  }
+
+  .book-now-btn {
+    font-size: 15px;
+  }
+  /* Service MQ ends */
+
+  /* Center content MQ starts  */
+  .total-img-over {
+    margin-top: 100px;
+  }
+  /* Center content MQ ends*/
+}
+
+/* Large: ≥992px */
+@media screen and (min-width: 992px) {
+  /* Nav bar menu starts */
+  .navbar-container {
+    flex-direction: row;
+  }
+  .total-logo {
+    padding: 0;
+  }
+  .nav-items {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    opacity: 1;
+    overflow: hidden;
+  }
+  .nav-list-items {
+    display: inline-block;
+    border-right: 1px solid #d4d4d4;
+  }
+  .menu {
+    display: none;
+  }
+
+  .navbar-container.container {
+    padding: 0 20px 0;
+  }
+  /* Nav bar menu ends */
+
+  /* Banner image section MQ */
+  .banner-caption {
+    width: 25%;
+  }
+  /* Banner image section MQ ends*/
+
+  /* Services MQ*/
+  .service {
+    width: 25%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 0px;
+  }
+  .service.item-2,
+  .service.item-3,
+  .service.item-4 {
+    display: block;
+  }
+  .total-services.container {
+    padding: 0 20px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .total-services {
+    margin-top: -59px;
+  }
+  .total-services .service:first-child {
+    padding-left: 0;
+  }
+  .total-services .service:last-child {
+    padding-right: 0;
+  }
+  .book-now-btn-text {
+    font-size: 13px;
+  }
+  /* Services MQ ends*/
+
+  /* Center content MQ starts */
+  .total-img-over {
+    margin-top: 150px;
+  }
+  .images-div .images {
+    width: 16.6667%;
+    border-right: 1px solid #d4d4d4;
+    border-left: 1px solid #d4d4d4;
+    height: 150px;
+  }
+  /* Center content MQ ends */
+
+  /* Footer MQ */
+  .inner-border {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  /* Footer MQ ends */
+}
+
+/* X-Large: ≥1200px */
+@media screen and (min-width: 1200px) {
+  /* Services MQ starts */
+  .service .place-description h4 {
+    font-size: 15px;
+  }
+  .book-now-btn-text {
+    font-size: 14px;
+  }
+  /* Services MQ ends */
+
+  /* Footer MQ */
+  .inner-border {
+    gap: 0px;
+  }
+  /* Footer MQ ends */
+}
+
+/* XX-Large: ≥1400px */
+@media screen and (min-width: 1400px) {
+  /* Services MQ starts */
+  .service .place-description h4 {
+    font-size: 18px;
+  }
+  .service .place-description p {
+    font-size: 20px;
+  }
+  /* Services MQ ends */
+}
+
+/* Media query as per the  bootstrap width  ends*/

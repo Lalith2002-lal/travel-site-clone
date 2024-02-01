@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <!-- linking the stylesheet -->
+    <link rel="stylesheet" href="form.css">
+</head>
+<!-- 
+    name - NO numbers and the special character
+    
+    number - text and no special character
+    
+    email - allowed with the @ and the domain name .com / .co.in
+    
+    checkbox - this checkbox need to important
+    
+    select - need to create the multiselect option
+    
+    File upload - allow jpg , png max size 5 mb
+    
+    Submission data - it need to show on the table 
+    
+    Create a table then the data got on the form need to show on 
+        table with the edit and delete option
+    
+    Delete button work on the table the delete button need to delete
+        the data on the form 
+ -->
+
+<body>
+    <div class="container">
+        <div class="form-total">
+            <form class="form" action="#" id="form" autocomplete="off">
+                <h2>REGISTRATION FORM</h2>
+
+                <div class="form-group ">
+                    <label for="username">
+                        <h5>NAME</h5>
+                    </label>
+                    <input type="text" id="username" data-name="username" placeholder="Enter you name">
+                    <p>Error message</p>
+                </div>
+                <div class="form-group ">
+                    <label for="mobileNumber">
+                        <h5>MOBILE NUMBER</h5>
+                    </label>
+                    <input type="tel" id="mobileNumber" data-name="mobileNumber" placeholder="Enter your mobile number">
+                    <p>Error message</p>
+                </div>
+                <div class="form-group">
+                    <label for="email">
+                        <h5>MAIL ID</h5>
+                    </label>
+                    <input type="email" id="email" data-name="email" placeholder="Enter your mail ID">
+                    <p>Error message</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="select">
+                        <h5>Choose an option</h5>
+                    </label>
+                    <select id="select" data-name="options">
+                        <option value="" disabled selected="selected" hidden>Options</option>
+                        <option value="option-1">Option-1</option>
+                        <option value="option-2">Option-2</option>
+                        <option value="option-3">Option-3</option>
+                    </select>
+                    <p>Error message</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="myfile">
+                        <h5>Select a file</h5>
+                    </label>
+                    <input type="file" id="myfile" data-name="myfile" multiple>
+                    <p>Error message</p>
+                </div>
+                <div class="form-group">
+                    <label for="floatingTextarea">
+                        <h5>MESSAGE</h5>
+                    </label>
+                    <textarea class="form-control" name="message" placeholder="Enter your words here ..."
+                        id="floatingTextarea" data-name="Message"></textarea>
+                    <p>Error message</p>
+                </div>
+                <div class="form-group checkbox">
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="checkbox" data-name="checkbox">
+                        <label for="checkbox"> I accept all terms</label>
+                    </div>
+
+                </div>
+
+
+                <button class="button submit" type="submit">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="table-container">
+        <table class="data-table" id="dataTable">
+            <tr>
+                <th>NAME</th>
+                <th>NUMBER</th>
+                <th>MAIL </th>
+                <th>TEXT</th>
+                <th>IMAGE</th>
+                <th>ACTION</th>
+            </tr>
+        </table>
+        <div class="reset-button">
+            <button class="small-btn common-btn" id="reset">Reset</button>
+        </div>
+    </div>
+    <script src="formvalidation.js"></script>
+</body>
+
+</html>
